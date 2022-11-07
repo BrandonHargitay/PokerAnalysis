@@ -49,3 +49,7 @@ std::string Card::suitToString() const {
         case SPADES: return "Spades";
     }
 }
+std::ostream& operator<<(std::ostream& out, const Card& card){
+    out << "\n\n" << card.rankToString() << " of " << card.suitToString();
+    return out;
+}
