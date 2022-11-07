@@ -30,14 +30,14 @@ std::string Card::rankToString() const {
         case QUEEN: return  "Queen";
         case JACK: return  "Jack";
         case TEN: return  "Ten";
-        case NINE: return  "9";
-        case EIGHT: return  "8";
-        case SEVEN: return  "7";
-        case SIX: return  "6";
-        case FIVE: return  "5";
-        case FOUR: return  "4";
-        case THREE: return  "3";
-        case TWO: return  "2";
+        case NINE: return  "Nine";
+        case EIGHT: return  "Eight";
+        case SEVEN: return  "Seven";
+        case SIX: return  "Six";
+        case FIVE: return  "Five";
+        case FOUR: return  "Four";
+        case THREE: return  "Three";
+        case TWO: return  "Two";
     }
 }
 
