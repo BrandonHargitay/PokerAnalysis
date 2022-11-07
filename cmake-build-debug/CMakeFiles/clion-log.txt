@@ -1,4 +1,4 @@
-/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/Applications/CLion.app/Contents/bin/ninja/mac/ninja -G Ninja -S /Users/hargy/CLionProjects/Poker -B /Users/hargy/CLionProjects/Poker/cmake-build-debug
+/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/Applications/CLion.app/Contents/bin/ninja/mac/ninja -G Ninja -S /Users/hargy/CLionProjects/PokerAnalysis -B /Users/hargy/CLionProjects/PokerAnalysis/cmake-build-debug
 -- Configuring done
 -- Generating done
--- Build files have been written to: /Users/hargy/CLionProjects/Poker/cmake-build-debug
+-- Build files have been written to: /Users/hargy/CLionProjects/PokerAnalysis/cmake-build-debug

@@ -50,6 +50,6 @@ std::string Card::suitToString() const {
     }
 }
 std::ostream& operator<<(std::ostream& out, const Card& card){
-    out << "\n\n" << card.rankToString() << " of " << card.suitToString();
+    out << "\n" << card.rankToString() << " of " << card.suitToString();
     return out;
 }

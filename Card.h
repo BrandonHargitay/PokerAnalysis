@@ -4,7 +4,6 @@
 
 #ifndef POKER_CARD_H
 #define POKER_CARD_H
-
 #include "RankENum.h"
 #include "SuitENum.h"
 

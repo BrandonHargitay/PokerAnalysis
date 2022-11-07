@@ -9,6 +9,6 @@ int main() {
     std::cout << d;
 
     std::cout << d.dealCard();
-
+    std::cout << d.dealCard();
 
 }

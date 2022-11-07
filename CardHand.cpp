@@ -3,3 +3,13 @@
 //
 
 #include "CardHand.h"
+
+CardHand::CardHand() : cardIndex(0) {}
+
+void CardHand::addCard(Card card) {
+    hand.push_back(card);
+}
+
+Card CardHand::getNextCard() {
+    return hand[cardIndex++];
+}

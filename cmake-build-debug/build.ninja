@@ -36,7 +36,7 @@ include CMakeFiles/rules.ninja
 #############################################
 # Logical path to working directory; prefix for absolute paths.
 
-cmake_ninja_workdir = /Users/hargy/CLionProjects/Poker/cmake-build-debug/
+cmake_ninja_workdir = /Users/hargy/CLionProjects/PokerAnalysis/cmake-build-debug/
 # =============================================================================
 # Object build statements for EXECUTABLE target Poker
 
@@ -46,20 +46,26 @@ cmake_ninja_workdir = /Users/hargy/CLionProjects/Poker/cmake-build-debug/
 
 build cmake_object_order_depends_target_Poker: phony || CMakeFiles/Poker.dir
 
-build CMakeFiles/Poker.dir/main.cpp.o: CXX_COMPILER__Poker_Debug /Users/hargy/CLionProjects/Poker/main.cpp || cmake_object_order_depends_target_Poker
+build CMakeFiles/Poker.dir/main.cpp.o: CXX_COMPILER__Poker_Debug /Users/hargy/CLionProjects/PokerAnalysis/main.cpp || cmake_object_order_depends_target_Poker
   DEP_FILE = CMakeFiles/Poker.dir/main.cpp.o.d
   FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk -mmacosx-version-min=12.6 -std=gnu++14
   OBJECT_DIR = CMakeFiles/Poker.dir
   OBJECT_FILE_DIR = CMakeFiles/Poker.dir
 
-build CMakeFiles/Poker.dir/Deck.cpp.o: CXX_COMPILER__Poker_Debug /Users/hargy/CLionProjects/Poker/Deck.cpp || cmake_object_order_depends_target_Poker
+build CMakeFiles/Poker.dir/Deck.cpp.o: CXX_COMPILER__Poker_Debug /Users/hargy/CLionProjects/PokerAnalysis/Deck.cpp || cmake_object_order_depends_target_Poker
   DEP_FILE = CMakeFiles/Poker.dir/Deck.cpp.o.d
   FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk -mmacosx-version-min=12.6 -std=gnu++14
   OBJECT_DIR = CMakeFiles/Poker.dir
   OBJECT_FILE_DIR = CMakeFiles/Poker.dir
 
-build CMakeFiles/Poker.dir/Card.cpp.o: CXX_COMPILER__Poker_Debug /Users/hargy/CLionProjects/Poker/Card.cpp || cmake_object_order_depends_target_Poker
+build CMakeFiles/Poker.dir/Card.cpp.o: CXX_COMPILER__Poker_Debug /Users/hargy/CLionProjects/PokerAnalysis/Card.cpp || cmake_object_order_depends_target_Poker
   DEP_FILE = CMakeFiles/Poker.dir/Card.cpp.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk -mmacosx-version-min=12.6 -std=gnu++14
+  OBJECT_DIR = CMakeFiles/Poker.dir
+  OBJECT_FILE_DIR = CMakeFiles/Poker.dir
+
+build CMakeFiles/Poker.dir/CardHand.cpp.o: CXX_COMPILER__Poker_Debug /Users/hargy/CLionProjects/PokerAnalysis/CardHand.cpp || cmake_object_order_depends_target_Poker
+  DEP_FILE = CMakeFiles/Poker.dir/CardHand.cpp.o.d
   FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk -mmacosx-version-min=12.6 -std=gnu++14
   OBJECT_DIR = CMakeFiles/Poker.dir
   OBJECT_FILE_DIR = CMakeFiles/Poker.dir
@@ -72,7 +78,7 @@ build CMakeFiles/Poker.dir/Card.cpp.o: CXX_COMPILER__Poker_Debug /Users/hargy/CL
 #############################################
 # Link the executable Poker
 
-build Poker: CXX_EXECUTABLE_LINKER__Poker_Debug CMakeFiles/Poker.dir/main.cpp.o CMakeFiles/Poker.dir/Deck.cpp.o CMakeFiles/Poker.dir/Card.cpp.o
+build Poker: CXX_EXECUTABLE_LINKER__Poker_Debug CMakeFiles/Poker.dir/main.cpp.o CMakeFiles/Poker.dir/Deck.cpp.o CMakeFiles/Poker.dir/Card.cpp.o CMakeFiles/Poker.dir/CardHand.cpp.o
   FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk -mmacosx-version-min=12.6
   OBJECT_DIR = CMakeFiles/Poker.dir
   POST_BUILD = :
@@ -85,7 +91,7 @@ build Poker: CXX_EXECUTABLE_LINKER__Poker_Debug CMakeFiles/Poker.dir/main.cpp.o 
 # Utility command for edit_cache
 
 build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /Users/hargy/CLionProjects/Poker/cmake-build-debug && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  COMMAND = cd /Users/hargy/CLionProjects/PokerAnalysis/cmake-build-debug && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -96,7 +102,7 @@ build edit_cache: phony CMakeFiles/edit_cache.util
 # Utility command for rebuild_cache
 
 build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /Users/hargy/CLionProjects/Poker/cmake-build-debug && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake --regenerate-during-build -S/Users/hargy/CLionProjects/Poker -B/Users/hargy/CLionProjects/Poker/cmake-build-debug
+  COMMAND = cd /Users/hargy/CLionProjects/PokerAnalysis/cmake-build-debug && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake --regenerate-during-build -S/Users/hargy/CLionProjects/PokerAnalysis -B/Users/hargy/CLionProjects/PokerAnalysis/cmake-build-debug
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -112,7 +118,7 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 # =============================================================================
 
 #############################################
-# Folder: /Users/hargy/CLionProjects/Poker/cmake-build-debug
+# Folder: /Users/hargy/CLionProjects/PokerAnalysis/cmake-build-debug
 
 build all: phony Poker
 
