@@ -7,4 +7,8 @@ int main() {
     Deck d;
 
     std::cout << d;
+
+    std::cout << d.dealCard();
+
+
 }
