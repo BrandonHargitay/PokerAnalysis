@@ -1,14 +1,19 @@
 #include <iostream>
 #include "Deck.h"
-#include "SuitENum.h"
-#include "RankENum.h"
+#include "CardHand.h"
 
 int main() {
     Deck d;
+    CardHand p1;
 
     std::cout << d;
 
-    std::cout << d.dealCard();
-    std::cout << d.dealCard();
+    //std::cout << d.dealCard();
+    p1.addCard(d.dealCard());
+    p1.addCard(d.dealCard());
+    p1.addCard(d.dealCard());
+    p1.addCard(d.dealCard());
+    p1.addCard(d.dealCard());
 
+    std::cout << p1;
 }
