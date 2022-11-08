@@ -49,7 +49,6 @@ void Deck::init() {
 }
 
 std::ostream& operator<<(std::ostream& out, const Deck& deck){
-
     for (int i = 0; i < deck.DECK_SIZE ; i++) {
         out << "\n" << i + 1 << ": " << deck.deck[i].rankToString() << " of " << deck.deck[i].suitToString();
     }
