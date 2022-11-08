@@ -11,10 +11,12 @@ class CardHand {
 public:
     CardHand();
     void addCard(Card card);
-    Card getNextCard();
+    Card getNextCard(int cardIndex) const;
+    std::vector<Card> getHand()const;
 private:
     std::vector<Card> hand; //array of players Cards
     int cardIndex;
+    friend std::ostream& operator<<(std::ostream& out, const CardHand& hand);
 };
 
 
