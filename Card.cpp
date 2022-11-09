@@ -50,3 +50,15 @@ bool operator<(const Card &c1, const Card &c2) {
 bool operator==(const Card &c1, const Card &c2) {
     return c1.rank == c2.rank;
 }
+bool operator==(const Card &c1, const int &n ) {
+    return c1.rank == n;
+}
+bool operator==( const int &n, const Card &c1){
+    return c1.rank == n;
+}
+int operator+(const Card &c1, const int &n){
+    return c1.rank + n;
+}
+int operator+(const int &n,const Card &c1){
+    return c1.rank + n;
+}

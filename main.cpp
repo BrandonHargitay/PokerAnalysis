@@ -9,9 +9,9 @@ int main() {
     int high = 0;
     int onePair = 0;
     int twoPair = 0;
-
-
-    for(int i = 0; i < 500; i++){
+    int threeKind = 0;
+    int straight = 0;
+    for(int i = 0; i < 30000; i++){
         Deck d;
         d.shuffle();
 
@@ -28,10 +28,14 @@ int main() {
         if(PokerScore::isHighCard(p1) == 1) high++;
         if(PokerScore::isOnePair(p1) == 1) onePair++;
         if(PokerScore::isTwoPair(p1) == 1) twoPair++;
+        if(PokerScore::isThreeofKind(p1) == 1) threeKind++;
+        if(PokerScore::isStraight(p1) == 1) straight++;
     }
 
     std::cout << "High: " << high << "\n";
     std::cout << "One Pair: " << onePair << "\n";
     std::cout << "Two Pair: " << twoPair << "\n";
+    std::cout << "Three Kind: " << threeKind << "\n";
+    std::cout << "Straight: " << straight << "\n";
 
 }

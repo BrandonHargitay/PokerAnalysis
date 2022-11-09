@@ -22,6 +22,10 @@ private:
     friend bool operator>(const Card &c1, const Card &c2);
     friend bool operator<(const Card &c1, const Card &c2);
     friend bool operator==(const Card &c1, const Card &c2);
+    friend bool operator==(const Card &c1, const int &n);
+    friend bool operator==( const int &n, const Card &c1);
+    friend int operator+(const Card &c1, const int &n);
+    friend int operator+(const int &n,const Card &c1);
 };
 
 

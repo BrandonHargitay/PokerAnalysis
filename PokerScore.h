@@ -32,7 +32,6 @@ public:
         HIGH_CARD //highest card in the player’s hand
 
     };
-
     static bool isRoyalFlush(CardHand hand);
     static bool isStraightFLush(CardHand hand);
     static bool isFourOfKind(CardHand hand);
