@@ -12,7 +12,8 @@ public:
     CardHand();
     void addCard(Card card);
     Card getNextCard(int cardIndex) const;
-    std::vector<Card> getHand()const;
+    int getSize();
+    std::vector<Card> getHand();
 private:
     std::vector<Card> hand; //array of players Cards
     int cardIndex;

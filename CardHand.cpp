@@ -14,7 +14,7 @@ Card CardHand::getNextCard(int cardIndex )const  {
     return hand[cardIndex];
 }
 
-std::vector<Card> CardHand::getHand() const {
+std::vector<Card> CardHand::getHand()  {
     return hand;
 }
 
@@ -23,4 +23,8 @@ std::ostream& operator<<(std::ostream& out, const CardHand& hand){
         out << "\nHAND: " << hand.hand[i].rankToString() << " of " << hand.getNextCard(i).suitToString();
     }
     return out;
+}
+
+int CardHand::getSize() {
+    return hand.size();
 }
