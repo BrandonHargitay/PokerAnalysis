@@ -61,3 +61,6 @@ bool operator>(const Card &c1, const Card &c2) {
 bool operator<(const Card &c1, const Card &c2) {
     return c1.rank < c2.rank;
 }
+bool operator==(const Card &c1, const Card &c2) {
+    return c1.rank == c2.rank;
+}
