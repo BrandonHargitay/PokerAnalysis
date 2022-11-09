@@ -17,7 +17,7 @@ Deck::Deck() : cardIndex(0){
 }
 
 void Deck::shuffle() {
-   srand((unsigned int)time(NULL));
+
     for (int i = 0; i < DECK_SIZE; i++) {
         int idx = rand() % DECK_SIZE;
         Card temp = deck[i];
@@ -54,5 +54,3 @@ std::ostream& operator<<(std::ostream& out, const Deck& deck){
     }
     return out;
 }
-
-

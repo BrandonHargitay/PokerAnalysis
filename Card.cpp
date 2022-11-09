@@ -4,21 +4,7 @@
 
 #include "Card.h"
 
-std::string Card::getSuit() {
-    return suitToString();
-}
 
-std::string Card::getRank() {
-    return rankToString();
-}
-
-void Card::setSuit(SuitENum suit) {
-    this->suit = suit;
-}
-
-void Card::setRank(RankENum rank) {
-    this->rank = rank;
-}
 Card::Card(SuitENum suit, RankENum rank) : suit(suit), rank(rank) {}
 
 Card::Card() : Card(SPADES, ACE) {}

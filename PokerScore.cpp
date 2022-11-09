@@ -33,14 +33,22 @@ bool PokerScore::isThreeofKind(CardHand hand) {
     return false;
 }
 
-bool PokerScore::IsTwoPair(CardHand hand) {
+bool PokerScore::isTwoPair(CardHand hand) {
+    int count = 0;
+    for (int i = 0; i < hand.getSize() - 1; ++i) {
+        if(hand.getNextCard(i) == hand.getNextCard(i+1)){
+            count++;
+            i++;
+            if(count == 2) return true;
+        }
+    }
     return false;
 }
 
 bool PokerScore::isOnePair(CardHand hand) {
 
-    for(int i = 0; i < hand.getSize(); i++){
-        if(hand.getNextCard(i).getRank() == hand.getNextCard(i+1).getRank()){
+    for(int i = 0; i < hand.getSize() - 1; i++){
+        if(hand.getNextCard(i) == hand.getNextCard(i+1)){
             return true;
         }
     }
@@ -48,7 +56,7 @@ bool PokerScore::isOnePair(CardHand hand) {
 }
 
 bool PokerScore::isHighCard(CardHand hand) {
-    if(hand.getSize() >0 ){
+    if(hand.getSize() > 0 ){
         return true;
     }
     return false;

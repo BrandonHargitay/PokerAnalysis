@@ -40,7 +40,7 @@ public:
     static bool isFlush(CardHand hand);
     static bool isStraight(CardHand hand);
     static bool isThreeofKind(CardHand hand);
-    static bool IsTwoPair(CardHand hand);
+    static bool isTwoPair(CardHand hand);
     static bool isOnePair(CardHand hand);
     static bool isHighCard(CardHand hand);
 

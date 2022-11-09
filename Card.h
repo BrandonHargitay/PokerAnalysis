@@ -11,10 +11,6 @@
 
 class Card {
 public:
-    std::string getSuit();
-    std::string getRank();
-    void setSuit(SuitENum suit);
-    void setRank(RankENum rank);
     std::string rankToString() const;
     std::string suitToString() const;
     Card(SuitENum suit, RankENum string);

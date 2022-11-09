@@ -23,6 +23,7 @@ std::ostream& operator<<(std::ostream& out, const CardHand& hand){
     for (int i = 0; i < 5; i++) {
         out << "\nHAND: " << hand.hand[i].rankToString() << " of " << hand.getNextCard(i).suitToString();
     }
+    out << "\n";
     return out;
 }
 
@@ -33,4 +34,3 @@ int CardHand::getSize() {
 void CardHand::sort() {
     std::sort(hand.begin(), hand.end());
 }
-
