@@ -14,6 +14,8 @@ int main() {
     p1.addCard(d.dealCard());
     p1.addCard(d.dealCard());
     p1.addCard(d.dealCard());
+    std::cout << p1;
 
+    p1.sort();
     std::cout << p1;
 }
