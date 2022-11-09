@@ -4,21 +4,39 @@
 
 #include "PokerScore.h"
 
-
+static int scores[10] = { };
 bool PokerScore::isRoyalFlush(CardHand hand) {
+    //check if its a flush
+    if(!isFlush(hand)) return false;
+    //check for A-10-J-Q-K
+    if(((hand.getNextCard(0) == RankENum::ACE) && (hand.getNextCard(1) == RankENum::TEN))
+       &&((hand.getNextCard(2) == RankENum::JACK) && ((hand.getNextCard(3) == RankENum::QUEEN))
+          && (hand.getNextCard(4) == RankENum::KING))) return true;
+
     return false;
+
+
 }
 
 bool PokerScore::isStraightFLush(CardHand hand) {
+    if(isFlush(hand) && isStraight(hand)){
+        return true;
+    }
     return false;
 }
 
 bool PokerScore::isFourOfKind(CardHand hand) {
+    int count = 0;
+    for (int i = 0; i < hand.getSize() - 1; i++){
+        if(hand.getNextCard(i) == hand.getNextCard(i+1)){
+            count++;
+            if(count == 3) return true;
+        }
+    }
     return false;
 }
 
 bool PokerScore::isFullHouse(CardHand hand) {
-
     if((hand.getNextCard(0) == hand.getNextCard(1))
        && (hand.getNextCard(1) == hand.getNextCard(2))){
         if(hand.getNextCard(3) == hand.getNextCard(4)){
@@ -32,11 +50,10 @@ bool PokerScore::isFullHouse(CardHand hand) {
     }else{
         return false;
     }
-
-
+    return false;
     //if (first thre cards are the same)
         //if (last two cards are the same)
-    //else (first two cards are the same)
+    //else if(first two cards are the same)
         //if(last three cards are the same)
 }
 
@@ -56,7 +73,7 @@ bool PokerScore::isFlush(CardHand hand) {
 bool PokerScore::isStraight(CardHand hand) {
     int count = 0;
 
-    //check for A-K-Q-J-10
+    //check for A-10-J-Q-K
     if(((hand.getNextCard(0) == RankENum::ACE) && (hand.getNextCard(1) == RankENum::TEN))
     &&((hand.getNextCard(2) == RankENum::JACK) && ((hand.getNextCard(3) == RankENum::QUEEN))
     && (hand.getNextCard(4) == RankENum::KING))) return true;
@@ -109,4 +126,17 @@ bool PokerScore::isHighCard(CardHand hand) {
         return true;
     }
     return false;
+}
+
+void PokerScore::addScore(Scores score) {
+    if(score == HIGH_CARD ) scores[0] = scores[0] + 1;
+    if(score == ONE_PAIR ) scores[1] = scores[1] + 1;
+    if(score == TWO_PAIR ) scores[2] = scores[2] + 1;
+    if(score == THREE_OK_A_KIND ) scores[3] = scores[3] + 1;
+    if(score == STRAIGHT ) scores[4] = scores[4] + 1;
+    if(score == FLUSH ) scores[5] = scores[5] + 1;
+    if(score == FULL_HOUSE ) scores[6] = scores[6] + 1;
+    if(score == FOUR_OF_A_KIND ) scores[7] = scores[7] + 1;
+    if(score == STRAIGHT_FLUSH ) scores[8] = scores[8] + 1;
+    if(score == ROYAL_FLUSH ) scores[9] = scores[9] + 1;
 }

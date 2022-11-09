@@ -42,14 +42,14 @@ public:
     static bool isTwoPair(CardHand hand);
     static bool isOnePair(CardHand hand);
     static bool isHighCard(CardHand hand);
-
+    static void addScore(Scores score);
 
 
     void operator+=(const Scores& score);
     friend bool operator==(const PokerScore& p, Scores score);
     PokerScore();
 private:
-    std::vector<Scores> scores;
+
 };
 
 
