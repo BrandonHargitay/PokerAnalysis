@@ -12,6 +12,7 @@ int main() {
     int threeKind = 0;
     int straight = 0;
     int flush = 0;
+    int fullHouse = 0;
     for(int i = 0; i < 30000; i++){
         Deck d;
         d.shuffle();
@@ -32,6 +33,7 @@ int main() {
         if(PokerScore::isThreeofKind(p1) == 1) threeKind++;
         if(PokerScore::isStraight(p1) == 1) straight++;
         if(PokerScore::isFlush(p1) == 1) flush++;
+        if(PokerScore::isFullHouse(p1) == 1) fullHouse++;
     }
 
     std::cout << "High: " << high << "\n";
@@ -40,4 +42,5 @@ int main() {
     std::cout << "Three Kind: " << threeKind << "\n";
     std::cout << "Straight: " << straight << "\n";
     std::cout << "Flush: " << flush << "\n";
+    std::cout << "Full House: " << fullHouse << "\n";
 }
