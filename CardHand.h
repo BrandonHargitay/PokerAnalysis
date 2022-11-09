@@ -14,10 +14,12 @@ public:
     Card getNextCard(int cardIndex) const;
     int getSize();
     std::vector<Card> getHand();
+    void sort();
 private:
     std::vector<Card> hand; //array of players Cards
     int cardIndex;
     friend std::ostream& operator<<(std::ostream& out, const CardHand& hand);
+
 };
 
 

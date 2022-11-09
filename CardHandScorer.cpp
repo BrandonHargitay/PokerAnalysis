@@ -3,3 +3,11 @@
 //
 
 #include "CardHandScorer.h"
+
+CardHandScorer::CardHandScorer() {
+
+}
+
+void CardHandScorer::sort(CardHand &hand) {
+    std::sort(hand.getHand().begin(), hand.getHand().end());
+}

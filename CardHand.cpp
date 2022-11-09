@@ -19,6 +19,7 @@ std::vector<Card> CardHand::getHand()  {
 }
 
 std::ostream& operator<<(std::ostream& out, const CardHand& hand){
+    //std::sort(temp.getHand().begin(), temp.getHand().end());
     for (int i = 0; i < 5; i++) {
         out << "\nHAND: " << hand.hand[i].rankToString() << " of " << hand.getNextCard(i).suitToString();
     }
@@ -28,3 +29,8 @@ std::ostream& operator<<(std::ostream& out, const CardHand& hand){
 int CardHand::getSize() {
     return hand.size();
 }
+
+void CardHand::sort() {
+    std::sort(hand.begin(), hand.end());
+}
+

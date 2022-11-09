@@ -70,6 +70,18 @@ build CMakeFiles/Poker.dir/CardHand.cpp.o: CXX_COMPILER__Poker_Debug /Users/harg
   OBJECT_DIR = CMakeFiles/Poker.dir
   OBJECT_FILE_DIR = CMakeFiles/Poker.dir
 
+build CMakeFiles/Poker.dir/CardHandScorer.cpp.o: CXX_COMPILER__Poker_Debug /Users/hargy/CLionProjects/PokerAnalysis/CardHandScorer.cpp || cmake_object_order_depends_target_Poker
+  DEP_FILE = CMakeFiles/Poker.dir/CardHandScorer.cpp.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk -mmacosx-version-min=12.6 -std=gnu++14
+  OBJECT_DIR = CMakeFiles/Poker.dir
+  OBJECT_FILE_DIR = CMakeFiles/Poker.dir
+
+build CMakeFiles/Poker.dir/PokerScore.cpp.o: CXX_COMPILER__Poker_Debug /Users/hargy/CLionProjects/PokerAnalysis/PokerScore.cpp || cmake_object_order_depends_target_Poker
+  DEP_FILE = CMakeFiles/Poker.dir/PokerScore.cpp.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk -mmacosx-version-min=12.6 -std=gnu++14
+  OBJECT_DIR = CMakeFiles/Poker.dir
+  OBJECT_FILE_DIR = CMakeFiles/Poker.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target Poker
@@ -78,7 +90,7 @@ build CMakeFiles/Poker.dir/CardHand.cpp.o: CXX_COMPILER__Poker_Debug /Users/harg
 #############################################
 # Link the executable Poker
 
-build Poker: CXX_EXECUTABLE_LINKER__Poker_Debug CMakeFiles/Poker.dir/main.cpp.o CMakeFiles/Poker.dir/Deck.cpp.o CMakeFiles/Poker.dir/Card.cpp.o CMakeFiles/Poker.dir/CardHand.cpp.o
+build Poker: CXX_EXECUTABLE_LINKER__Poker_Debug CMakeFiles/Poker.dir/main.cpp.o CMakeFiles/Poker.dir/Deck.cpp.o CMakeFiles/Poker.dir/Card.cpp.o CMakeFiles/Poker.dir/CardHand.cpp.o CMakeFiles/Poker.dir/CardHandScorer.cpp.o CMakeFiles/Poker.dir/PokerScore.cpp.o
   FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk -mmacosx-version-min=12.6
   OBJECT_DIR = CMakeFiles/Poker.dir
   POST_BUILD = :
