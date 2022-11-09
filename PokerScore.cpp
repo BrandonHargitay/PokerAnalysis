@@ -18,7 +18,26 @@ bool PokerScore::isFourOfKind(CardHand hand) {
 }
 
 bool PokerScore::isFullHouse(CardHand hand) {
-    return false;
+
+    if((hand.getNextCard(0) == hand.getNextCard(1))
+       && (hand.getNextCard(1) == hand.getNextCard(2))){
+        if(hand.getNextCard(3) == hand.getNextCard(4)){
+            return true;
+        }
+    }else if(hand.getNextCard(0) == hand.getNextCard(1)){
+        if((hand.getNextCard(2) == hand.getNextCard(3))
+           && (hand.getNextCard(3) == hand.getNextCard(4))){
+            return true;
+        }
+    }else{
+        return false;
+    }
+
+
+    //if (first thre cards are the same)
+        //if (last two cards are the same)
+    //else (first two cards are the same)
+        //if(last three cards are the same)
 }
 
 bool PokerScore::isFlush(CardHand hand) {
