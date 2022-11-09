@@ -22,7 +22,16 @@ bool PokerScore::isFullHouse(CardHand hand) {
 }
 
 bool PokerScore::isFlush(CardHand hand) {
+    SuitENum suit = hand.getNextCard(0).getSuit();
+    int count = 0;
+    for (int i = 1; i < hand.getSize() ; i++){
+        if(suit == hand.getNextCard(i).getSuit() ){
+            count++;
+            if(count == 4) return true;
+        }
+    }
     return false;
+
 }
 
 bool PokerScore::isStraight(CardHand hand) {
@@ -52,7 +61,7 @@ bool PokerScore::isThreeofKind(CardHand hand) {
     }
     return false;
 }
-
+//checl if hand has two pair eg. A A 2 2 J
 bool PokerScore::isTwoPair(CardHand hand) {
     int count = 0;
     for (int i = 0; i < hand.getSize() - 1; i++) {
@@ -65,8 +74,8 @@ bool PokerScore::isTwoPair(CardHand hand) {
     return false;
 }
 
+//check if hand has a pair ex. A A 4 8 9
 bool PokerScore::isOnePair(CardHand hand) {
-
     for(int i = 0; i < hand.getSize() - 1; i++){
         if(hand.getNextCard(i) == hand.getNextCard(i+1)){
             return true;
@@ -75,6 +84,7 @@ bool PokerScore::isOnePair(CardHand hand) {
     return false;
 }
 
+//checks if hand has a high card
 bool PokerScore::isHighCard(CardHand hand) {
     if(hand.getSize() > 0 ){
         return true;

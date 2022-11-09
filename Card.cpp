@@ -62,3 +62,7 @@ int operator+(const Card &c1, const int &n){
 int operator+(const int &n,const Card &c1){
     return c1.rank + n;
 }
+
+SuitENum Card::getSuit() {
+    return suit;
+}

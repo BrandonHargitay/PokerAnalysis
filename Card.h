@@ -13,6 +13,7 @@ class Card {
 public:
     std::string rankToString() const;
     std::string suitToString() const;
+    SuitENum getSuit();
     Card(SuitENum suit, RankENum string);
     Card();
 private:
