@@ -26,14 +26,16 @@ bool PokerScore::isStraightFLush(CardHand hand) {
 }
 
 bool PokerScore::isFourOfKind(CardHand hand) {
+
     int count = 0;
-    for (int i = 0; i < hand.getSize() - 1; i++){
-        if(hand.getNextCard(i) == hand.getNextCard(i+1)){
+    for (int i = 0; i < 2; i++)
+        if (!(hand.getNextCard(i) == hand.getNextCard(i+3))){
             count++;
-            if(count == 3) return true;
         }
-    }
+    if(count == 1 ) return true;
+
     return false;
+
 }
 
 bool PokerScore::isFullHouse(CardHand hand) {

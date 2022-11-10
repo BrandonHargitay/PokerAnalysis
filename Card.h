@@ -6,10 +6,10 @@
 #define POKER_CARD_H
 #include "RankENum.h"
 #include "SuitENum.h"
-
+#include <SFML/Graphics.hpp>
 #include <iostream>
 
-class Card {
+class Card : public sf::Drawable, sf::Transformable{
 public:
     std::string rankToString() const;
     std::string suitToString() const;

@@ -2,7 +2,7 @@
 // Created by Brandon Hargitay on 10/25/22.
 //
 
-#include "CardDrawable.h"
+#include "Card.h"
 sf::Texture Card::texture;
 sf::Font Card::font;
 

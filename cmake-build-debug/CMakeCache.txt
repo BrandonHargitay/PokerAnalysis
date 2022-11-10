@@ -213,6 +213,12 @@ Poker_IS_TOP_LEVEL:STATIC=ON
 //Value Computed by CMake
 Poker_SOURCE_DIR:STATIC=/Users/hargy/CLionProjects/PokerAnalysis
 
+//The directory containing a CMake configuration file for SFML.
+SFML_DIR:PATH=/opt/homebrew/lib/cmake/SFML
+
+//Path to a file.
+SFML_DOC_DIR:PATH=SFML_DOC_DIR-NOTFOUND
+
 
 ########################
 # INTERNAL cache entries
