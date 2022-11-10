@@ -47,7 +47,7 @@ public:
 
     void operator+=(const Scores& score);
     friend bool operator==(const PokerScore& p, Scores score);
-    PokerScore();
+    friend std::ostream& operator<<(std::ostream& out, const PokerScore& s);
 private:
 
 };

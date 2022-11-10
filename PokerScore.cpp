@@ -140,3 +140,19 @@ void PokerScore::addScore(Scores score) {
     if(score == STRAIGHT_FLUSH ) scores[8] = scores[8] + 1;
     if(score == ROYAL_FLUSH ) scores[9] = scores[9] + 1;
 }
+
+std::ostream& operator<<(std::ostream& out, const PokerScore& s){
+
+    out << "High: " << scores[0] << "\n";
+    out << "One Pair: " << scores[1] << "\n";
+    out << "Two Pair: " << scores[2] << "\n";
+    out << "Three Kind: " << scores[3] << "\n";
+    out << "Straight: " << scores[4] << "\n";
+    out << "Flush: " << scores[5] << "\n";
+    out << "Full House: " << scores[6] << "\n";
+    out << "Four of a kind: " << scores[7] << "\n";
+    out << "Straight Flush: " << scores[8] << "\n";
+    out << "Royal Flush: " << scores[9] << "\n";
+
+    return out;
+}
