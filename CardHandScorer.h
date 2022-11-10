@@ -12,11 +12,11 @@
 
 class CardHandScorer {
 public:
-    CardHandScorer();
-private:
     static PokerScore handScore(CardHand hand);
     static void displayScored(const PokerScore& score);
     void sort(CardHand &hand);
+private:
+
 };
 
 
