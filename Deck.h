@@ -19,6 +19,7 @@ public:
     void init();
     Deck(); // this is the constructor
 private:
+
     Card deck[52];// this is your final deck of cards
     const int SUIT_MAX = 4; //number of suits
     const int RANK_MAX = 13; //number of ranks

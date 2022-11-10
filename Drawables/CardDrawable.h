@@ -2,15 +2,15 @@
 // Created by Brandon Hargitay on 10/25/22.
 //
 
-#ifndef PLAYINGCARD_CARD_H
-#define PLAYINGCARD_CARD_H
+#ifndef POKER_CARDDRAWABLE_H
+#define POKER_CARDDRAWABLE_H
 #include <SFML/Graphics.hpp>
 #include <string>
 #include <iostream>
-#include "RankENum.h"
-#include "SuitENum.h"
+#include "../RankENum.h"
+#include "../SuitENum.h"
 
-class Card : public sf::Drawable, sf::Transformable{
+class CardDrawable : public sf::Drawable, sf::Transformable{
 private:
     sf::RectangleShape background;
     sf::Text rank;
@@ -21,17 +21,16 @@ private:
     static sf::Font font;
     SuitENum _suit;
     RankENum _rank;
-    std::string rankToString();
-    std::string suitToString();
-
 
     void setupRank();
     void setupSuit();
 public:
-    Card();
-    Card(SuitENum suit, RankENum rank);
+    CardDrawable();
+    CardDrawable(SuitENum suit, RankENum rank);
     void setupBackground();
     void init();
+    std::string rankToString() const;
+    std::string suitToString();
     virtual void draw(sf::RenderTarget& window, sf::RenderStates states) const;
     void setFillColor(const sf::Color& color);
     void setSize(sf::Vector2f size);
@@ -45,4 +44,4 @@ public:
 };
 
 
-#endif //PLAYINGCARD_CARD_H
+#endif //POKER_CARDDRAWABLE_H

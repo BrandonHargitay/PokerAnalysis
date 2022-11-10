@@ -6,17 +6,19 @@
 #define POKER_CARD_H
 #include "RankENum.h"
 #include "SuitENum.h"
-#include <SFML/Graphics.hpp>
+
 #include <iostream>
 
-class Card : public sf::Drawable, sf::Transformable{
+class Card {
 public:
     std::string rankToString() const;
     std::string suitToString() const;
     SuitENum getSuit();
+    RankENum getRank();
     Card(SuitENum suit, RankENum string);
     Card();
 private:
+    //CardDrawable c;
     SuitENum suit;
     RankENum rank;
     friend std::ostream& operator<<(std::ostream& out, const Card& card);
