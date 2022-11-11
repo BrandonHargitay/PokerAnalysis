@@ -4,6 +4,10 @@
 
 #include "CardDrawable.h"
 sf::Texture CardDrawable::texture;
+sf::Texture CardDrawable::heart;
+sf::Texture CardDrawable::diamonds;
+sf::Texture CardDrawable::clubs;
+sf::Texture CardDrawable::spades;
 sf::Font CardDrawable::font;
 
 std::string CardDrawable::rankToString() const {
@@ -24,7 +28,7 @@ std::string CardDrawable::rankToString() const {
     }
 }
 
-std::string CardDrawable::suitToString() {
+std::string CardDrawable::suitToString() const {
     switch (_suit) {
         case HEARTS: return "Drawables/images/heart.png";
         case DIAMONDS: return "Drawables/images/diamond.png";
@@ -93,6 +97,7 @@ void CardDrawable::init() {
     setupBackground();
     setupRank();
     setupSuit();
+
 }
 
 void CardDrawable::setupBackground() {
@@ -129,6 +134,11 @@ void CardDrawable::setupRank() {
 }
 
 void CardDrawable::setupSuit() {
+    heart.loadFromFile("Drawables/images/heart.png");
+    diamonds.loadFromFile("Drawables/images/diamond.png");
+    clubs.loadFromFile("Drawables/images/club.png");
+    spades.loadFromFile("Drawables/images/spade.png");
+
     if(!texture.loadFromFile(suitToString()))
         exit(21);
     suit.setTexture(texture);

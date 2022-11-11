@@ -18,6 +18,10 @@ private:
     sf::Sprite suit;
     sf::Vector2f cardPosition;
     static sf::Texture texture;
+    static sf::Texture heart;
+    static sf::Texture diamonds;
+    static sf::Texture clubs;
+    static sf::Texture spades;
     static sf::Font font;
     SuitENum _suit;
     RankENum _rank;
@@ -30,7 +34,7 @@ public:
     void setupBackground();
     void init();
     std::string rankToString() const;
-    std::string suitToString();
+    std::string suitToString()const;
     virtual void draw(sf::RenderTarget& window, sf::RenderStates states) const;
     void setFillColor(const sf::Color& color);
     void setSize(sf::Vector2f size);

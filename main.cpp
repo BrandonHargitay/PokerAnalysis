@@ -10,7 +10,7 @@ int main() {
     srand((unsigned int)time(NULL));
 
     PokerScore total;
-    for(int i = 0; i < 70000; i++){
+    for(int i = 0; i < 600000; i++){
         Deck d3;
         d3.shuffle();
 
@@ -47,7 +47,7 @@ int main() {
     p1.addCard(c3);
     p1.addCard(c4);
     p1.addCard(c5);
-
+    p1.position();
     std::cout << d2;
     std::cout << p1;
     //c2.setPosition({500,30});

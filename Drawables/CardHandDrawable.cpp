@@ -15,9 +15,12 @@ void CardHandDrawable::draw(sf::RenderTarget &window, sf::RenderStates states) c
 }
 
 void CardHandDrawable::position() {
-    for(int i = 0; i < drawableHand.size(); i++){
-        drawableHand[i];
-    }
+
+        drawableHand[0].setPosition({100.f,300.f});
+        drawableHand[1].setPosition({300.f,300.f});
+        drawableHand[2].setPosition({500.f,300.f});
+        drawableHand[3].setPosition({700.f,300.f});
+        drawableHand[4].setPosition({900.f,300.f});
 }
 
 void CardHandDrawable::addCard(CardDrawable card) {
@@ -27,7 +30,7 @@ void CardHandDrawable::addCard(CardDrawable card) {
 std::ostream& operator<<(std::ostream& out, const CardHandDrawable& card){
 
     for (int i = 0; i < 5; i++){
-        out << "\n" << card.drawableHand[i].rankToString() << " of ";
+        out << "\n" << card.drawableHand[i].rankToString() << " of " << card.drawableHand[i].suitToString();
     }
     return out;
 }
