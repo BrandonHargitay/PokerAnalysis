@@ -15,12 +15,13 @@ void CardHandDrawable::draw(sf::RenderTarget &window, sf::RenderStates states) c
 }
 
 void CardHandDrawable::position() {
+        //drawableHand[0].getGlobalBounds().left + drawableHand[0].getGlobalBounds().width;
 
-        drawableHand[0].setPosition({100.f,300.f});
-        drawableHand[1].setPosition({300.f,300.f});
-        drawableHand[2].setPosition({500.f,300.f});
-        drawableHand[3].setPosition({700.f,300.f});
-        drawableHand[4].setPosition({900.f,300.f});
+        drawableHand[0].setPosition({460.f,200.f});
+        drawableHand[1].setPosition({660,200.f});
+        drawableHand[2].setPosition({860.f,200.f});
+        drawableHand[3].setPosition({1060.f,200.f});
+        drawableHand[4].setPosition({1260.f,200.f});
 }
 
 void CardHandDrawable::addCard(CardDrawable card) {

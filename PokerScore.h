@@ -43,8 +43,7 @@ public:
     static bool isOnePair(CardHand hand);
     static bool isHighCard(CardHand hand);
     static void addScore(Scores score);
-
-
+    static std::array<int,10> getScores();
     void operator+=(const Scores& score);
     friend bool operator==(const PokerScore& p, Scores score);
     friend std::ostream& operator<<(std::ostream& out, const PokerScore& s);

@@ -17,7 +17,7 @@ private:
     sf::Text rank2;
     sf::Sprite suit;
     sf::Vector2f cardPosition;
-    static sf::Texture texture;
+    sf::Texture texture;
     static sf::Texture heart;
     static sf::Texture diamonds;
     static sf::Texture clubs;

@@ -2,9 +2,10 @@
 // Created by Brandon Hargitay on 11/8/22.
 //
 
+#include <array>
 #include "PokerScore.h"
 
-static int scores[10] = { };
+static std::array<int, 10> scores;
 bool PokerScore::isRoyalFlush(CardHand hand) {
     //check if its a flush
     if(!isFlush(hand)) return false;
@@ -157,4 +158,8 @@ std::ostream& operator<<(std::ostream& out, const PokerScore& s){
     out << "Royal Flush: " << scores[9] << "\n";
 
     return out;
+}
+
+std::array<int, 10> PokerScore::getScores() {
+    return scores;
 }

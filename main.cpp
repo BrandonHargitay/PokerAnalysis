@@ -1,5 +1,5 @@
 #include <iostream>
-#include "Deck.h"
+#include "Drawables/DrawStatistics.h"
 #include "CardHand.h"
 #include "PokerScore.h"
 #include "CardHandScorer.h"
@@ -26,12 +26,13 @@ int main() {
     CardHandScorer::handScore(p1);
 
     }
+    //int PokerScore::scores;
 
     std::cout << total;
 
 
     //Displays window
-
+    DrawStatistics statistics;
     Deck d2;
     d2.shuffle();
     sf::RenderWindow window({1920, 1080, 32},"Top Hat Guy");
@@ -48,8 +49,8 @@ int main() {
     p1.addCard(c4);
     p1.addCard(c5);
     p1.position();
-    std::cout << d2;
-    std::cout << p1;
+    //std::cout << d2;
+    //std::cout << p1;
     //c2.setPosition({500,30});
     while(window.isOpen())
     {
@@ -62,10 +63,9 @@ int main() {
         //c.setPosition({0.f,0.f});
         window.clear(sf::Color(50,168,82));
         window.draw(p1);
+        window.draw(statistics);
         window.display();
     }
-
-
 
 return 0;
 }

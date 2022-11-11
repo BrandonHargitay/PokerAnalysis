@@ -3,7 +3,7 @@
 //
 
 #include "CardDrawable.h"
-sf::Texture CardDrawable::texture;
+
 sf::Texture CardDrawable::heart;
 sf::Texture CardDrawable::diamonds;
 sf::Texture CardDrawable::clubs;
@@ -43,7 +43,7 @@ CardDrawable::CardDrawable() : CardDrawable(HEARTS, ACE) {
 
 
 CardDrawable::CardDrawable(SuitENum suit, RankENum rank) : _suit(suit), _rank(rank) {
-    cardPosition = {10.f, 10.f};
+    cardPosition = {0.f, 0.f};
     init();
 }
 
@@ -55,9 +55,9 @@ void CardDrawable::draw(sf::RenderTarget& window, sf::RenderStates states) const
     window.draw(rank, states);
     window.draw(rank2, states);
 }
-//sf::FloatRect CardDrawable::getGlobalBounds(){
-//    return background.getGlobalBounds();
-//}
+sf::FloatRect CardDrawable::getGlobalBounds(){
+    return background.getGlobalBounds();
+}
 //
 //void CardDrawable::setFillColor(const sf::Color &color) {
 //
@@ -134,10 +134,17 @@ void CardDrawable::setupRank() {
 }
 
 void CardDrawable::setupSuit() {
-    heart.loadFromFile("Drawables/images/heart.png");
-    diamonds.loadFromFile("Drawables/images/diamond.png");
-    clubs.loadFromFile("Drawables/images/club.png");
-    spades.loadFromFile("Drawables/images/spade.png");
+//    heart.loadFromFile("Drawables/images/heart.png");
+//    diamonds.loadFromFile("Drawables/images/diamond.png");
+//    clubs.loadFromFile("Drawables/images/club.png");
+//    spades.loadFromFile("Drawables/images/spade.png");
+
+    switch (_suit) {
+        case HEARTS: texture = heart;
+        case DIAMONDS: texture = diamonds;
+        case CLUBS: texture = clubs;
+        case SPADES: texture = spades;
+    }
 
     if(!texture.loadFromFile(suitToString()))
         exit(21);

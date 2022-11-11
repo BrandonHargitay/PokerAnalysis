@@ -102,6 +102,13 @@ build CMakeFiles/Poker.dir/Drawables/CardHandDrawable.cpp.o: CXX_COMPILER__Poker
   OBJECT_DIR = CMakeFiles/Poker.dir
   OBJECT_FILE_DIR = CMakeFiles/Poker.dir/Drawables
 
+build CMakeFiles/Poker.dir/Drawables/DrawStatistics.cpp.o: CXX_COMPILER__Poker_Debug /Users/hargy/CLionProjects/PokerAnalysis/Drawables/DrawStatistics.cpp || cmake_object_order_depends_target_Poker
+  DEP_FILE = CMakeFiles/Poker.dir/Drawables/DrawStatistics.cpp.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk -mmacosx-version-min=12.6 -std=gnu++14
+  INCLUDES = -isystem /opt/homebrew/include
+  OBJECT_DIR = CMakeFiles/Poker.dir
+  OBJECT_FILE_DIR = CMakeFiles/Poker.dir/Drawables
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target Poker
@@ -110,7 +117,7 @@ build CMakeFiles/Poker.dir/Drawables/CardHandDrawable.cpp.o: CXX_COMPILER__Poker
 #############################################
 # Link the executable Poker
 
-build Poker: CXX_EXECUTABLE_LINKER__Poker_Debug CMakeFiles/Poker.dir/main.cpp.o CMakeFiles/Poker.dir/Deck.cpp.o CMakeFiles/Poker.dir/Card.cpp.o CMakeFiles/Poker.dir/CardHand.cpp.o CMakeFiles/Poker.dir/CardHandScorer.cpp.o CMakeFiles/Poker.dir/PokerScore.cpp.o CMakeFiles/Poker.dir/Drawables/CardDrawable.cpp.o CMakeFiles/Poker.dir/Drawables/CardHandDrawable.cpp.o | /opt/homebrew/lib/libsfml-graphics.2.5.1.dylib /opt/homebrew/lib/libsfml-audio.2.5.1.dylib /opt/homebrew/lib/libsfml-window.2.5.1.dylib /opt/homebrew/lib/libsfml-system.2.5.1.dylib
+build Poker: CXX_EXECUTABLE_LINKER__Poker_Debug CMakeFiles/Poker.dir/main.cpp.o CMakeFiles/Poker.dir/Deck.cpp.o CMakeFiles/Poker.dir/Card.cpp.o CMakeFiles/Poker.dir/CardHand.cpp.o CMakeFiles/Poker.dir/CardHandScorer.cpp.o CMakeFiles/Poker.dir/PokerScore.cpp.o CMakeFiles/Poker.dir/Drawables/CardDrawable.cpp.o CMakeFiles/Poker.dir/Drawables/CardHandDrawable.cpp.o CMakeFiles/Poker.dir/Drawables/DrawStatistics.cpp.o | /opt/homebrew/lib/libsfml-graphics.2.5.1.dylib /opt/homebrew/lib/libsfml-audio.2.5.1.dylib /opt/homebrew/lib/libsfml-window.2.5.1.dylib /opt/homebrew/lib/libsfml-system.2.5.1.dylib
   FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk -mmacosx-version-min=12.6
   LINK_LIBRARIES = -Wl,-rpath,/opt/homebrew/lib  /opt/homebrew/lib/libsfml-graphics.2.5.1.dylib  /opt/homebrew/lib/libsfml-audio.2.5.1.dylib  /opt/homebrew/lib/libsfml-window.2.5.1.dylib  /opt/homebrew/lib/libsfml-system.2.5.1.dylib
   OBJECT_DIR = CMakeFiles/Poker.dir
