@@ -4,7 +4,6 @@
 
 #include "Card.h"
 
-
 Card::Card(SuitENum suit, RankENum rank) : suit(suit), rank(rank) {}
 
 Card::Card() : Card(SPADES, ACE) {}
