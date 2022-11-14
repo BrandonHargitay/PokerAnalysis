@@ -7,6 +7,7 @@
 #include <SFML/Graphics.hpp>
 #include <string>
 #include <iostream>
+#include "../Deck.h"
 #include "../RankENum.h"
 #include "../SuitENum.h"
 
@@ -25,7 +26,6 @@ private:
     static sf::Font font;
     SuitENum _suit;
     RankENum _rank;
-
     void setupRank();
     void setupSuit();
 public:
