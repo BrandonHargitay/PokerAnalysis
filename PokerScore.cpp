@@ -13,10 +13,7 @@ bool PokerScore::isRoyalFlush(CardHand hand) {
     if(((hand.getNextCard(0) == RankENum::ACE) && (hand.getNextCard(1) == RankENum::TEN))
        &&((hand.getNextCard(2) == RankENum::JACK) && ((hand.getNextCard(3) == RankENum::QUEEN))
           && (hand.getNextCard(4) == RankENum::KING))) return true;
-
     return false;
-
-
 }
 
 bool PokerScore::isStraightFLush(CardHand hand) {
