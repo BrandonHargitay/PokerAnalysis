@@ -4,6 +4,7 @@
 
 #include "CardDrawable.h"
 
+
 sf::Texture CardDrawable::heart;
 sf::Texture CardDrawable::diamonds;
 sf::Texture CardDrawable::clubs;

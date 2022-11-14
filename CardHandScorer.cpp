@@ -26,5 +26,4 @@ PokerScore CardHandScorer::handScore(CardHand hand) {
     if(PokerScore::isRoyalFlush(hand) == 1) s.addScore(PokerScore::ROYAL_FLUSH);
 
     return s;
-
 }
